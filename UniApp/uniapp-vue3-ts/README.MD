@@ -18,3 +18,12 @@ npm i
 * 组件的生命周期可以，运行`/pages/lifecycle/lifecycle`和`/pages/lifecycle2/lifecycle2`，在控制它观察。
 
 而因为vue3有个setup的语法糖，可以直接在`<script setup>`申明。所以用不用这个语法糖，写法有点点不一样。但是主要的逻辑是一样的。要区分`mount`，`unmount`，`update`几个状态就行。
+
+# css
+## flex 布局
+示例：`/pages/uiflex/uiflex`
+
+先要在style里面指定使用flex布局：display: flex
+1. 然后指定排列方式以继要不要换行。flex-direction 排放方式 ，flex-wrap要不要换行。 简写方式：flex-flow
+2. 接着指定对其方式。justify-content 主轴对其方式, align-item 非主轴对其方式
+

@@ -34,7 +34,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/uiflex/uiflex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

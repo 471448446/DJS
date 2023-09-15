@@ -8,6 +8,7 @@
 		<button @click="naviSimpleClick2">计数器2</button>
 		<button @click="naviTo('/pages/lifecycle/lifecycle')">使用setup，Vue3组件生命周期</button>
 		<button @click="naviTo('/pages/lifecycle2/lifecycle2')">不使用setup，Vue3组件生命周期</button>
+		<button @click="naviTo('/pages/uiflex/uiflex')">flex布局</button>
 	</view>
 </template>
 
