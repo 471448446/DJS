@@ -33,12 +33,53 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/uiflex/uiflex",
+			"style": {
+				"navigationBarTitleText": "flex布局体验",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/globaldata/globaldata",
+			"style": {
+				"navigationBarTitleText": "globaldata全局数据",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/vue3template/vue3template",
+			"style": {
+				"navigationBarTitleText": "vue3模板使用",
+				"enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black",
+				"backgroundColor": "#FFE3C8"
+			}
+
 		}
 	    ,{
-            "path" : "pages/uiflex/uiflex",
+            "path" : "pages/vue3instructvbind/vue3instructvbind",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "vue3模板v-bind",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vue3instructvon/vue3instructvon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "vue3模板v-on",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vue3instructifelse/vue3instructifelse",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "vue3模板if-else",
                 "enablePullDownRefresh": false
             }
             

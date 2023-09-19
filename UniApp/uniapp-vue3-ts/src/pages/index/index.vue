@@ -9,6 +9,11 @@
 		<button @click="naviTo('/pages/lifecycle/lifecycle')">使用setup，Vue3组件生命周期</button>
 		<button @click="naviTo('/pages/lifecycle2/lifecycle2')">不使用setup，Vue3组件生命周期</button>
 		<button @click="naviTo('/pages/uiflex/uiflex')">flex布局</button>
+		<button @click="naviTo('/pages/globaldata/globaldata')">全局数据</button>
+		<button @click="naviTo('/pages/vue3template/vue3template')">vue3操作模板</button>
+		<button @click="naviTo('/pages/vue3instructvbind/vue3instructvbind')">vue3指令v-bind</button>
+		<button @click="naviTo('/pages/vue3instructvon/vue3instructvon')">vue3指令v-on</button>
+		<button @click="naviTo('/pages/vue3instructifelse/vue3instructifelse')">vue3指令if-else</button>
 	</view>
 </template>
 

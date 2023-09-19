@@ -1,7 +1,21 @@
+<script lang="ts">
+	const appVersion = 110
+	// 微信中，只有通过这种方式申明才能使用全局变量。妈蛋
+	export default {
+		globalData: {
+			appVersion: appVersion
+		}
+	}
+</script>
 <script setup lang="ts">
+	// https://uniapp.dcloud.net.cn/collocation/App.html#applifecycle
+	/*
+	这个文件的作用包括：监听应用生命周期、配置全局样式、配置全局的存储globalData
+	应用生命周期仅可在App.vue中监听，在页面监听无效。
+	*/
 	import { onLaunch, onShow, onHide, onError, onInit, onLoad } from "@dcloudio/uni-app";
 	// 页面生命周期和组件生命周期有区别
-	
+
 	onLaunch(() => {
 		//初始化完成时触发（全局只触发一次）。通常用来初始化前置数据，比如获取用户信息。
 		console.log("App Launch");
@@ -28,5 +42,19 @@
 		//报错时触发。
 		console.log("App onError");
 	})
+	// 注意这种方式无法在微信中使用，这里调用getApp()就报错误，undefined
+	// // 在App.vue中保存的数据，就是全局变量
+	// const appVersion = 110
+	// console.log("app.vue appVersion:" + appVersion)
+	// /**
+	//  * 	使用setup后的语法。
+	//  * 如果没有使用：export default { globalData: {xxxx} }
+	//  */
+	// getApp().globalData.appVersion = appVersion
+	// const globalData = {
+	// 	appVersion: appVersion
+	// }
+	// getApp().globalData = globalData
+	// // console.log(getApp().globalData)
 </script>
 <style></style>
