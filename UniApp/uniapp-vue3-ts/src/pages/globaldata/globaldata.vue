@@ -7,14 +7,10 @@
 </template>
 
 <script setup lang="ts">
-	import { onShow } from '@dcloudio/uni-app';
-	import { onBeforeMount } from 'vue';
-	let getAppVersion = 0
+	import { onBeforeMount, ref } from 'vue';
+	let getAppVersion = ref(0)
 	onBeforeMount(() => {
 		console.log(getApp().globalData)
-
-	})
-	onShow(() => {
 		getAppVersion = getApp().globalData.appVersion
 	})
 </script>
