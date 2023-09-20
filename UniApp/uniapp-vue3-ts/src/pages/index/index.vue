@@ -14,6 +14,9 @@
 		<button @click="naviTo('/pages/vue3instructvbind/vue3instructvbind')">vue3指令v-bind</button>
 		<button @click="naviTo('/pages/vue3instructvon/vue3instructvon')">vue3指令v-on</button>
 		<button @click="naviTo('/pages/vue3instructifelse/vue3instructifelse')">vue3指令if-else</button>
+		<button @click="naviTo('/pages/vue3instructvfor/vue3instructvfor')">vue3指令v-for</button>
+		<button @click="naviTo('/pages/vue3instructvmodel/vue3instructvmodel')">vue3指令v-model</button>
+		<button @click="naviTo('/pages/eventclick/eventclick')">事件处理</button>
 	</view>
 </template>
 
@@ -52,10 +55,10 @@
 	.logo {
 		height: 200rpx;
 		width: 200rpx;
-		margin-top: 200rpx;
+		margin-top: 20rpx;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 50rpx;
+		margin-bottom: 20rpx;
 	}
 
 	.text-area {

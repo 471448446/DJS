@@ -84,6 +84,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/vue3instructvfor/vue3instructvfor",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "v-for",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/eventclick/eventclick",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "事件@click",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vue3instructvmodel/vue3instructvmodel",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "v-model",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

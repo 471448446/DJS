@@ -1,0 +1,9 @@
+	.simpleTitle {
+		color: black;
+		font-size: 50rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20rpx;
+		font-weight: 700;
+	}
