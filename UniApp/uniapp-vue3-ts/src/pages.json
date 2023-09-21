@@ -111,6 +111,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/reactcomputed/reactcomputed",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "响应式：计算属性和侦听器",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/reactwatch/reactwatch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "响应式：watch",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/reactreactive/reactreactive",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "响应式：reactive",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

@@ -158,6 +158,18 @@ html的标签内容可以通过`{{content}}`实现更新，但是标签的属性
 	</view>
 ```
 
+### v-model
+
+你可以用 v-model 指令在表单 `input`、`textarea` 及 `select` 元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 `v-model` 本质上不过是语法糖。它负责监听用户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。
+
+比如输入框中，实现输入内容和变量得绑定
+
+特别注意，他有修饰符[v-model](https://cn.vuejs.org/api/built-in-directives.html#v-model)。
+
+* 比如我在`pages/reactwatch/reactwatch`页面，监听两个输入框输入得数字，然后简单相加。居然不能政策运行。虽然申明了接受类型是`Ref<Number>`，但是还是要需要借助于`v-model.number="inputA"`将输入框中的输入转换成数字，才能正常的相加。感觉这更像是个bug。
+
+
+
 ## 事件绑定
 
 使用`v-on:click`或者`@click`
@@ -166,3 +178,60 @@ html的标签内容可以通过`{{content}}`实现更新，但是标签的属性
 * 事件修饰符全平台只有`.stop`支持。各平台均支持， 使用时会阻止事件冒泡，在非 H5 端同时也会阻止事件的默认行为。
 
 **不要在JS中获取DOM设置事件**。
+
+
+
+## 响应式
+
+[响应式 API：核心](https://cn.vuejs.org/api/reactivity-core.html)
+
+vue3中，借助于向响应式，刷新模板。
+
+### 计算属性computed
+
+`pages/settergetter/settergetter`
+
+`computed` 表示[计算属性](https://juejin.cn/post/7135633187002122270)，通常用于处理数据，简化书写在模板中的复杂逻辑。使用 `computed` 可以将数据处理成我们想要的格式，无需在模板中使用复杂冗长的计算表达式。
+
+computed有两个方法，分别是set()和get()。它可以接受一个带有 `get` 和 `set` 函数的对象来创建一个可写的 ref 对象。
+
+* 为什么要有computed？ 模板中逻辑过重，不易维护，所以使用计算属性`computed`来简化书写响应式状态的复杂逻辑。
+
+
+
+### 侦听属性watch
+
+`pages/reactwatch/reactwatch`
+
+虽然计算属性在大多数情况下更合适，但有时也需要一个自定义的侦听器。这就是为什么 `Vue` 通过 `watch` 选项提供了一个更通用的方法，来响应数据的变化。当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。
+
+当你有一些数据需要随着其它数据变动而变动时，就可以使用`Watch`来监听他们之间的变化。
+
+一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。 `Vue` 实例将会在实例化时调用 `$watch()` ，遍历 `watch` 对象的每一个 `property` 。
+
+
+
+[vue:watch](https://cn.vuejs.org/api/reactivity-core.html#watch)
+
+#### computed和watch区别
+
+> watch是用来监听值得变换，在回调函数中，处理变化。而computed是更像是将属性变化后组合成新的值
+
+
+
+[计算属性 vs 侦听属性](https://uniapp.dcloud.net.cn/tutorial/vue3-basics.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7-vs-%E4%BE%A6%E5%90%AC%E5%B1%9E%E6%80%A7)
+
+
+
+### reactive
+
+`pages/reactreactive/reactreactive`
+
+响应式代理，这个是针对的对象，不能代理基础类型（string，number，boolean），ref是不限制的。
+
+`reactive()` 返回的是一个原始对象的 `Proxy`
+
+* 响应式转换是“深层”的：它会影响到所有嵌套的属性。一个响应式对象也将深层地解包任何 [ref](https://cn.vuejs.org/api/reactivity-core.html#ref) 属性，同时保持响应性。值得注意的是，当访问到某个响应式数组或 `Map` 这样的原生集合类型中的 ref 元素时，不会执行 ref 的解包。若要避免深层响应式转换，只想保留对这个对象顶层次访问的响应性，请使用 [shallowReactive()](https://cn.vuejs.org/api/reactivity-advanced.html#shallowreactive) 作替代。[reactive](https://cn.vuejs.org/api/reactivity-core.html#reactive)
+* 因为 Vue 的响应式系统是通过属性访问进行追踪的，如果我们直接“替换”一个响应式对象，这会导致对初始引用的响应性连接丢失：
+
+[全方位带你掌握 ref、reactive，开启 Vue3 响应式的大门！](https://juejin.cn/post/7143358534481575973)

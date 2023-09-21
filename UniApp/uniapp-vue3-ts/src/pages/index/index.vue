@@ -4,19 +4,32 @@
 		<view class="text-area">
 			<text class="title">{{ title }}</text>
 		</view>
+		<!-- <view style="display: flex; flex-flow: row wrap;"> -->
 		<button @click="naviSimpleClick">计数器</button>
 		<button @click="naviSimpleClick2">计数器2</button>
 		<button @click="naviTo('/pages/lifecycle/lifecycle')">使用setup，Vue3组件生命周期</button>
 		<button @click="naviTo('/pages/lifecycle2/lifecycle2')">不使用setup，Vue3组件生命周期</button>
-		<button @click="naviTo('/pages/uiflex/uiflex')">flex布局</button>
 		<button @click="naviTo('/pages/globaldata/globaldata')">全局数据</button>
-		<button @click="naviTo('/pages/vue3template/vue3template')">vue3操作模板</button>
-		<button @click="naviTo('/pages/vue3instructvbind/vue3instructvbind')">vue3指令v-bind</button>
-		<button @click="naviTo('/pages/vue3instructvon/vue3instructvon')">vue3指令v-on</button>
-		<button @click="naviTo('/pages/vue3instructifelse/vue3instructifelse')">vue3指令if-else</button>
-		<button @click="naviTo('/pages/vue3instructvfor/vue3instructvfor')">vue3指令v-for</button>
-		<button @click="naviTo('/pages/vue3instructvmodel/vue3instructvmodel')">vue3指令v-model</button>
-		<button @click="naviTo('/pages/eventclick/eventclick')">事件处理</button>
+		<view>
+			<text class="simpleTitle">布局</text>
+			<button @click="naviTo('/pages/uiflex/uiflex')">flex布局</button>
+		</view>
+		<view>
+			<text class="simpleTitle">Vue3相关</text>
+			<button @click="naviTo('/pages/vue3template/vue3template')">vue3操作模板</button>
+			<button @click="naviTo('/pages/vue3instructvbind/vue3instructvbind')">vue3指令v-bind</button>
+			<button @click="naviTo('/pages/vue3instructvon/vue3instructvon')">vue3指令v-on</button>
+			<button @click="naviTo('/pages/vue3instructifelse/vue3instructifelse')">vue3指令if-else</button>
+			<button @click="naviTo('/pages/vue3instructvfor/vue3instructvfor')">vue3指令v-for</button>
+			<button @click="naviTo('/pages/vue3instructvmodel/vue3instructvmodel')">vue3指令v-model</button>
+			<button @click="naviTo('/pages/eventclick/eventclick')">事件处理</button>
+			<button @click="naviTo('/pages/reactcomputed/reactcomputed')">响应式：computed计算属性</button>
+			<button @click="naviTo('/pages/reactwatch/reactwatch')">响应式：watch侦听属性</button>
+			<button @click="naviTo('/pages/reactreactive/reactreactive')">响应式：reactive</button>
+		</view>
+		<view>
+			<text class="simpleTitle">其他</text>
+		</view>
 	</view>
 </template>
 
@@ -45,6 +58,8 @@
 </script>
 
 <style>
+	@import "../../common/common.css";
+
 	.content {
 		display: flex;
 		flex-direction: column;
