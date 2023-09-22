@@ -29,6 +29,7 @@
 		</view>
 		<view>
 			<text class="simpleTitle">其他</text>
+			<button @click="naviTo('/pages/weapptest/weapptest')">微信小程序测试</button>
 		</view>
 	</view>
 </template>
