@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<button @click="testWxRequest">wx.request测试</button>
-
+		<button @click="getLauncerTest">wx.getLaunchOptionsSync测试</button>
 		<view>微信小程序版本 {{appInfo}}</view>
 	</view>
 
@@ -28,6 +28,19 @@
 				});
 			}
 		})
+	}
+	/**
+	 * https://developers.weixin.qq.com/miniprogram/dev/api/base/app/life-cycle/wx.getLaunchOptionsSync.html
+	 */
+	function getLauncerTest(){
+		const xxx = wx.getLaunchOptionsSync()
+		console.log("启动参数：" + xxx)
+		// Object.keys(p).forEach((k)=>{
+		// 	console.log(k)
+		// })
+		for (let key in xxx) {
+			console.log("getLaunchOptionsSync", key, xxx[key])
+		}
 	}
 	new Promise((resolve, reject) => {
 		// https://developers.weixin.qq.com/miniprogram/dev/api/base/app/life-cycle/wx.getLaunchOptionsSync.html
